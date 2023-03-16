@@ -1,0 +1,69 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/calculadora.css" />
+  </head>
+  <body>
+    <h1>La calculadora de Sakrete</h1>
+    <div class="calculadora">
+      <div class="opciones">
+        <select name="calculadora-opciones" class="calculadora-opciones">
+          <option value="slab">Calculadora de Slab</option>
+        </select>
+        <select name="" id=""></select>
+        <div>params</div>
+        <div class="slab-inputs">
+          <label for="largo-inptut">Largo</label>
+          <input type="number" id="largo-inptut" class="largo-input" />
+          <label for="ancho-inptut">ancho</label>
+          <input type="number" id="ancho-inptut" class="ancho-input" />
+          <label for="profundo-inptut">profundo</label>
+          <input type="number" id="profundo-inptut" class="profundo-input" />
+          <label class="switch">
+            <input type="checkbox" class="is-maximazer" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="resultado">
+          <button class="calculate">Enter</button>
+        </div>
+      </div>
+
+      <div class="results">
+        <h1>Calculator Resoults</h1>
+        <div class="product">
+          <h3 class="product-name"></h3>
+          <ul class="sizes"></ul>
+        </div>
+        <h2>Recomended product</h2>
+        <div class="recomended-product">
+        </div>
+        <h2>Other products</h2>
+        <div class="other-products">
+        </div>
+      </div>
+
+      <div class="pantalla">
+        El resultado es: <span class="result">resultado</span>
+      </div>
+      <div class="botones">
+        <div class="numeros">
+          <p class="numero 1">1</p>
+          <p class="numero 2">2</p>
+          <p class="numero 3">3</p>
+          <p class="numero 4">4</p>
+          <p class="numero 5">5</p>
+          <p class="numero 6">6</p>
+          <p class="numero 7">7</p>
+          <p class="numero 8">8</p>
+          <p class="numero 9">9</p>
+          <p class="numero 10">0</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/app.mjs"></script>
+  </body>
+</html>
