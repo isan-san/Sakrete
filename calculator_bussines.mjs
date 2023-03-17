@@ -89,3 +89,10 @@ export function calculate(length, width, depth, isMaximazer) {
   }
   return returnProducts;
 }
+export function verifyNotNullNumber (number){
+  if(number){
+    if(number)
+  }else{
+    return new error("number can't be null")
+  }
+}
