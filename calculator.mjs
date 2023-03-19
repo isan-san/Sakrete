@@ -1,7 +1,5 @@
-import { calculate } from "./calculator_bussines.mjs";
 import { fillRecomendedProducts } from "./content_filler.mjs";
-
-import { getProducts } from "/my_back";
+import { CALCULATE_SLAB } from "./APIRequests.mjs";
 
 var length = document.querySelector(".largo-input");
 var width = document.querySelector(".ancho-input");
@@ -13,16 +11,16 @@ var resultsElement = document.querySelector(".results");
 
 document.querySelector(".calculate").addEventListener("click", () => {
   try {
-    let calculatorResult = calculate(
-      Number(length.value),
-      Number(width.value),
-      Number(depth.value),
-      isMaximazer.checked
-    );
-    fillRecomendedProducts(calculatorResult, resultsElement, productElement);
+    CALCULATE_SLAB({
+      length: length.value,
+      width: width.value,
+      depth: depth.value,
+      isMaximazer: isMaximazer.checked,
+    }).then(result=>{
+      fillRecomendedProducts(result, resultsElement, productElement);
+    })
   } catch (error) {
     alert(error);
   }
 });
 
-console.log(getProducts());

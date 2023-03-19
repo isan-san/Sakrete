@@ -8,19 +8,19 @@ export function fillRecomendedProducts(
     .querySelector(".recomended-product")
     .appendChild(
       fillProduct(
-        calculatorResults.recomendedProduct,
+        calculatorResults,
         productElement.cloneNode(true)
       )
     );
-  resultsElement.querySelector(".other-products").innerHTML = "";
-  calculatorResults.otherProducts.forEach((product) => {
-    resultsElement
-      .querySelector(".other-products")
-      .appendChild(fillProduct(product, productElement.cloneNode(true)));
-  });
+  // resultsElement.querySelector(".other-products").innerHTML = "";
+  // calculatorResults.otherProducts.forEach((product) => {
+  //   resultsElement
+  //     .querySelector(".other-products")
+  //     .appendChild(fillProduct(product, productElement.cloneNode(true)));
+  // });
 }
 const fillProduct = (product, productElement) => {
-  productElement.querySelector(".product-name").innerHTML = product.name;
+  productElement.querySelector(".product-name").innerHTML = product.item.name;
   product.sizes.forEach((size) => {
     productElement.querySelector(
       ".sizes"
