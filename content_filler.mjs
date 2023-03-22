@@ -12,12 +12,6 @@ export function fillRecomendedProducts(
         productElement.cloneNode(true)
       )
     );
-  // resultsElement.querySelector(".other-products").innerHTML = "";
-  // calculatorResults.otherProducts.forEach((product) => {
-  //   resultsElement
-  //     .querySelector(".other-products")
-  //     .appendChild(fillProduct(product, productElement.cloneNode(true)));
-  // });
 }
 const fillProduct = (product, productElement) => {
   productElement.querySelector(".product-name").innerHTML = product.sizes.name;
