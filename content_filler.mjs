@@ -8,7 +8,7 @@ export function fillRecomendedProducts(
     .querySelector(".recomended-product")
     .appendChild(
       fillProduct(
-        calculatorResults,
+        calculatorResults.recomended,
         productElement.cloneNode(true)
       )
     );
@@ -20,8 +20,8 @@ export function fillRecomendedProducts(
   // });
 }
 const fillProduct = (product, productElement) => {
-  productElement.querySelector(".product-name").innerHTML = product.item.name;
-  product.sizes.forEach((size) => {
+  productElement.querySelector(".product-name").innerHTML = product.sizes.name;
+  product.sizes.sizes.forEach((size) => {
     productElement.querySelector(
       ".sizes"
     ).innerHTML += `<li>${size.weigth}. ${size.value}</li>`;
