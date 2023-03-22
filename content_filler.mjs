@@ -7,10 +7,7 @@ export function fillRecomendedProducts(
   resultsElement
     .querySelector(".recomended-product")
     .appendChild(
-      fillProduct(
-        calculatorResults.recomended,
-        productElement.cloneNode(true)
-      )
+      fillProduct(calculatorResults.recomended, productElement.cloneNode(true))
     );
 }
 const fillProduct = (product, productElement) => {
@@ -20,5 +17,7 @@ const fillProduct = (product, productElement) => {
       ".sizes"
     ).innerHTML += `<li>${size.weigth}. ${size.value}</li>`;
   });
+  console.log(product);
+  productElement.querySelector(".sakrete-image").src=""
   return productElement;
 };

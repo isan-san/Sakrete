@@ -10,8 +10,6 @@ document.querySelector(".product").remove();
 var resultsElement = document.querySelector(".results");
 var typeOfCalculator = document.querySelector(".type-of-calculator");
 
-
-
 document.querySelector(".calculate").addEventListener("click", () => {
   if (typeOfCalculator.checked) {
     try {

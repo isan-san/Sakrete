@@ -5,9 +5,10 @@ export const CALCULATE_SLAB_POUR = (data) => {
       method: "POST",
       body: JSON.stringify(data),
     })
-      .then(response => response.json())
-      .then(data=>{
-        resolve(JSON.parse(data.body))})
+      .then((response) => response.json())
+      .then((data) => {
+        resolve(JSON.parse(data.body));
+      })
       .catch((error) => reject(error));
   });
 };
@@ -18,9 +19,10 @@ export const CALCULATE_SLAB_REPAIR = (data) => {
       method: "POST",
       body: JSON.stringify(data),
     })
-      .then(response => response.json())
-      .then(data=>{
-        resolve(JSON.parse(data.body))})
+      .then((response) => response.json())
+      .then((data) => {
+        resolve(JSON.parse(data.body));
+      })
       .catch((error) => reject(error));
   });
 };
