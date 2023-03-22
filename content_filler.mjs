@@ -18,6 +18,6 @@ const fillProduct = (product, productElement) => {
     ).innerHTML += `<li>${size.weigth}. ${size.value}</li>`;
   });
   console.log(product);
-  productElement.querySelector(".sakrete-image").src=""
+  productElement.querySelector(".sakrete-image").src = product.image.url;
   return productElement;
 };
